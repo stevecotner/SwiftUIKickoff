@@ -5,13 +5,15 @@
 //  Created by Stephen E. Cotner on 7/20/20.
 //
 
+import Poet
 import SwiftUI
 
 @main
-struct SwiftUI_KickoffApp: App {
+struct Poet_TutorialApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuScreen()
         }
     }
 }

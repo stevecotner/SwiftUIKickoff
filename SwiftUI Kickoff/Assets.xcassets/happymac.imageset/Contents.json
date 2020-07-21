@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "happy-mac-icon-by-susan-kare-2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "happy-mac-icon-by-susan-kare-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "happy-mac-icon-by-susan-kare.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

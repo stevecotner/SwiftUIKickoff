@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftUI Kickoff
+//  SwiftUI Kickoff Mac
 //
 //  Created by Stephen E. Cotner on 7/20/20.
 //
