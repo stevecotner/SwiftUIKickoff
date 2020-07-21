@@ -70,7 +70,7 @@ struct BezelView: View {
             .background(
                 ZStack {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(Color(UIColor.systemBackground).opacity(0.95))
+                        .fill(Color.white.opacity(0.95)) // systemBackground
                         .padding(10)
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .fill(Color.primary.opacity(0.12))
