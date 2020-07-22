@@ -11,15 +11,15 @@ import SwiftUI
 
 struct ValidatingTextField<E: Evaluating_TextField>: View {
     private let evaluator: E
-    @ObservedObject var text = Observable("")
+    @Observed private var validation: TextValidation
     @Passable private var passableText: String? = ""
     private let placeholder: String
     private let elementName: EvaluatorElement
     private let isSecure: Bool
     private let keyboardType: KeyboardType
-    @Observed var validation: TextValidation
     
     // Internal state
+    @ObservedObject private var text = Observable("")
     @State private var shouldShowValidationMessage = false
     @State private var shouldShowValidationMark = false
     @State private var shouldShowCheckmark = false
@@ -62,6 +62,7 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
                     if isSecure {
                         SecureField(placeholder, text: $text.wrappedValue)
                             .disableAutocorrection(true)
+                            .modifier(DisableAutocapitalization())
                             .keyboardType(
                                 {
                                     switch keyboardType {
@@ -74,6 +75,8 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
                             )
                     } else {
                         TextField(placeholder, text: $text.wrappedValue)
+                            .autocapitalization(.none)
+                            .modifier(DisableAutocapitalization())
                             .disableAutocorrection(true)
                             .keyboardType(
                                 {
@@ -95,9 +98,6 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
                         .fill(Color.primary.opacity(0.05))
                 )
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
-                .onReceive(text.objectWillChange) {
-                    evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
-                }
                 
                 HStack {
                     Spacer()
@@ -149,6 +149,7 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
         .padding(.bottom, 10)
         
         .onReceive(text.objectDidChange.debounce(for: 0.4, scheduler: DispatchQueue.main)) {
+            evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
             let isValid = validation.isValid
             if self.text.wrappedValue.isEmpty {
                 self.shouldShowValidationMessage = false

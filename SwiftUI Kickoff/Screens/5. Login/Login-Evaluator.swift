@@ -129,11 +129,8 @@ extension LoginExample.Evaluator: Evaluating, Evaluating_ViewCycle, Evaluating_T
     }
     
     private func useCorrectCredentials() {
-        let username = "postman"
-        let password = "password"
-        
-        translator.passableUsername = username
-        translator.passablePassword = password
+        translator.username = "postman"
+        translator.password = "password"
     }
 
     // MARK: Text Field Evaluating

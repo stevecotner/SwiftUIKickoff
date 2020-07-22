@@ -24,9 +24,9 @@ extension LoginExample {
         @Observable var bottomButtonAction: NamedDisableableAction<Action>?
         
         // Passable State
+        @Passable var username: String?
+        @Passable var password: String?
         @Passable var alert: AlertConfiguration?
-        @Passable var passableUsername: String?
-        @Passable var passablePassword: String?
         @Passable var busy: Bool?
         
         // Passthrough Behavior

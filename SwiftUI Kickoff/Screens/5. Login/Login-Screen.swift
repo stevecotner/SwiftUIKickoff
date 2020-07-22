@@ -50,7 +50,7 @@ extension LoginExample {
                             evaluator: evaluator,
                             placeholder: "Username",
                             elementName: Evaluator.Element.usernameTextField,
-                            passableText: translator.$passableUsername,
+                            passableText: translator.$username,
                             isSecure: false,
                             validation: translator.$usernameValidation
                         )
@@ -60,7 +60,7 @@ extension LoginExample {
                             evaluator: evaluator,
                             placeholder: "Password",
                             elementName: Evaluator.Element.passwordTextField,
-                            passableText: translator.$passablePassword,
+                            passableText: translator.$password,
                             isSecure: true,
                             validation: translator.$passwordValidation
                         )

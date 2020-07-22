@@ -43,7 +43,8 @@ struct EvaluatingTextField<E: Evaluating_TextField>: View {
                 HStack(spacing: 10) {
                     TextField(placeholder, text: $text.wrappedValue)
                         .disableAutocorrection(true)
-                        .onReceive(text.objectWillChange) {
+                        .modifier(DisableAutocapitalization())
+                        .onReceive(text.objectDidChange) {
                             evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
                         }
 
@@ -81,5 +82,16 @@ struct TextFieldClearButton: View {
                 .opacity((text.wrappedValue.isEmpty) ? 0 : 0.3)
                 .foregroundColor(.primary)
         }
+    }
+}
+
+struct DisableAutocapitalization: ViewModifier {
+    @ViewBuilder func body(content: Content) -> some View {
+        #if os(iOS)
+        content
+            .autocapitalization(.none)
+        #else
+        content
+        #endif
     }
 }
