@@ -16,12 +16,10 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
     private let placeholder: String
     private let elementName: EvaluatorElement
     private let isSecure: Bool
-    private let inputType: InputType
+    private let keyboardType: KeyboardType
     @Observed var validation: TextValidation
     
     // Internal state
-    @State private var lastValidatedText: String = ""
-    @State private var validationImageColor: Color = Color.clear
     @State private var shouldShowValidationMessage = false
     @State private var shouldShowValidationMark = false
     @State private var shouldShowCheckmark = false
@@ -32,11 +30,9 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
     private let validColor: Color = Color.green // systemGreen
     private let invalidColor: Color = Color.red // systemRed
     
-    var textSink: AnyCancellable?
-    
-    enum InputType {
-        case ascii
-        case number
+    enum KeyboardType {
+        case defaultKeyboard
+        case numberKeyboard
     }
     
     init(evaluator: E,
@@ -45,7 +41,7 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
          initialText: String? = nil,
          passableText: Passable<String>? = nil,
          isSecure: Bool,
-         inputType: InputType = .ascii,
+         keyboardType: KeyboardType = .defaultKeyboard,
          validation: Observed<TextValidation>)
     {
         self.evaluator = evaluator
@@ -55,7 +51,7 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
             _passableText = passableText
         }
         self.isSecure = isSecure
-        self.inputType = inputType
+        self.keyboardType = keyboardType
         _validation = validation
     }
     
@@ -63,11 +59,33 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
         VStack(spacing: 0) {
             ZStack {
                 HStack(spacing: 10) {
-                    TextField(placeholder, text: $text.wrappedValue)
-                        .disableAutocorrection(true)
-                        .onReceive(text.objectWillChange) {
-                            evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
-                        }
+                    if isSecure {
+                        SecureField(placeholder, text: $text.wrappedValue)
+                            .disableAutocorrection(true)
+                            .keyboardType(
+                                {
+                                    switch keyboardType {
+                                    case .numberKeyboard:
+                                        return .decimalPad
+                                    case .defaultKeyboard:
+                                        return .default
+                                    }
+                                }()
+                            )
+                    } else {
+                        TextField(placeholder, text: $text.wrappedValue)
+                            .disableAutocorrection(true)
+                            .keyboardType(
+                                {
+                                    switch keyboardType {
+                                    case .numberKeyboard:
+                                        return .decimalPad
+                                    case .defaultKeyboard:
+                                        return .default
+                                    }
+                                }()
+                            )
+                    }
 
                     TextFieldClearButton(text: _text.wrappedValue, passableText: _passableText)
                 }
@@ -77,6 +95,9 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
                         .fill(Color.primary.opacity(0.05))
                 )
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
+                .onReceive(text.objectWillChange) {
+                    evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
+                }
                 
                 HStack {
                     Spacer()
