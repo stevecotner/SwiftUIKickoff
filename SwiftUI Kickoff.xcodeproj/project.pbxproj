@@ -123,6 +123,20 @@
 		DC56ED6624C68CA9004613CE /* Poet in Frameworks */ = {isa = PBXBuildFile; productRef = DC56ED6524C68CA9004613CE /* Poet */; };
 		DC74D4BD24C7653000E5D9A4 /* BezelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4BC24C7653000E5D9A4 /* BezelPresenter.swift */; };
 		DC74D4BE24C7653C00E5D9A4 /* BezelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4BC24C7653000E5D9A4 /* BezelPresenter.swift */; };
+		DC74D4C724C80B8C00E5D9A4 /* Login-Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C024C80B8200E5D9A4 /* Login-Screen.swift */; };
+		DC74D4C824C80B8C00E5D9A4 /* Login-Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C524C80B8300E5D9A4 /* Login-Translator.swift */; };
+		DC74D4CA24C80B8C00E5D9A4 /* Login-Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C124C80B8200E5D9A4 /* Login-Evaluator.swift */; };
+		DC74D4CB24C80B8C00E5D9A4 /* Login-Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C324C80B8200E5D9A4 /* Login-Performer.swift */; };
+		DC74D4CD24C80B8D00E5D9A4 /* Login-Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C024C80B8200E5D9A4 /* Login-Screen.swift */; };
+		DC74D4CE24C80B8D00E5D9A4 /* Login-Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C524C80B8300E5D9A4 /* Login-Translator.swift */; };
+		DC74D4D024C80B8D00E5D9A4 /* Login-Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C124C80B8200E5D9A4 /* Login-Evaluator.swift */; };
+		DC74D4D124C80B8D00E5D9A4 /* Login-Performer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C324C80B8200E5D9A4 /* Login-Performer.swift */; };
+		DC74D4D324C813E500E5D9A4 /* Login-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C424C80B8200E5D9A4 /* Login-Tests.swift */; };
+		DC74D4D424C814B600E5D9A4 /* Login-MockPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4C224C80B8200E5D9A4 /* Login-MockPerformer.swift */; };
+		DC74D4D724C81A9B00E5D9A4 /* BusyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */; };
+		DC74D4D824C81AE500E5D9A4 /* BusyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */; };
+		DC74D4DB24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */; };
+		DC74D4DC24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +246,14 @@
 		DC56ED4824C68AEA004613CE /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		DC56ED4924C68AEA004613CE /* AfterWait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AfterWait.swift; sourceTree = "<group>"; };
 		DC74D4BC24C7653000E5D9A4 /* BezelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezelPresenter.swift; sourceTree = "<group>"; };
+		DC74D4C024C80B8200E5D9A4 /* Login-Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Screen.swift"; sourceTree = "<group>"; };
+		DC74D4C124C80B8200E5D9A4 /* Login-Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Evaluator.swift"; sourceTree = "<group>"; };
+		DC74D4C224C80B8200E5D9A4 /* Login-MockPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-MockPerformer.swift"; sourceTree = "<group>"; };
+		DC74D4C324C80B8200E5D9A4 /* Login-Performer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Performer.swift"; sourceTree = "<group>"; };
+		DC74D4C424C80B8200E5D9A4 /* Login-Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Tests.swift"; sourceTree = "<group>"; };
+		DC74D4C524C80B8300E5D9A4 /* Login-Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Translator.swift"; sourceTree = "<group>"; };
+		DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyPresenter.swift; sourceTree = "<group>"; };
+		DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,7 +421,8 @@
 				DC56ECFE24C68A34004613CE /* 2. Text Field */,
 				DC56ECFD24C68A1C004613CE /* 3. Undo Redo */,
 				DC56ED0124C68A66004613CE /* 4. Passables */,
-				DC56ED0224C68A76004613CE /* 5. Retail */,
+				DC74D4BF24C80B4E00E5D9A4 /* 5. Login */,
+				DC56ED0224C68A76004613CE /* 6. Retail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -478,7 +501,7 @@
 			path = "4. Passables";
 			sourceTree = "<group>";
 		};
-		DC56ED0224C68A76004613CE /* 5. Retail */ = {
+		DC56ED0224C68A76004613CE /* 6. Retail */ = {
 			isa = PBXGroup;
 			children = (
 				DC56ECCA24C689FB004613CE /* RetailScreen.swift */,
@@ -487,7 +510,7 @@
 				DC56ECD424C689FC004613CE /* Retail-PageViewMaker.swift */,
 				DC56ED0324C68A86004613CE /* Views */,
 			);
-			path = "5. Retail";
+			path = "6. Retail";
 			sourceTree = "<group>";
 		};
 		DC56ED0324C68A86004613CE /* Views */ = {
@@ -536,6 +559,7 @@
 				DC74D4BC24C7653000E5D9A4 /* BezelPresenter.swift */,
 				DC56ED3524C68ADD004613CE /* Presenter.swift */,
 				DC56ED3624C68ADE004613CE /* PresenterWithPassedValue.swift */,
+				DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -545,6 +569,28 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC74D4BF24C80B4E00E5D9A4 /* 5. Login */ = {
+			isa = PBXGroup;
+			children = (
+				DC74D4C024C80B8200E5D9A4 /* Login-Screen.swift */,
+				DC74D4C124C80B8200E5D9A4 /* Login-Evaluator.swift */,
+				DC74D4C524C80B8300E5D9A4 /* Login-Translator.swift */,
+				DC74D4C324C80B8200E5D9A4 /* Login-Performer.swift */,
+				DC74D4C424C80B8200E5D9A4 /* Login-Tests.swift */,
+				DC74D4C224C80B8200E5D9A4 /* Login-MockPerformer.swift */,
+				DC74D4D924C81B2E00E5D9A4 /* Views */,
+			);
+			path = "5. Login";
+			sourceTree = "<group>";
+		};
+		DC74D4D924C81B2E00E5D9A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -790,9 +836,11 @@
 				DC56ECFB24C68A03004613CE /* PassablesExample_ViewModel.swift in Sources */,
 				DC56ECF724C68A03004613CE /* ObservingExample_Screen.swift in Sources */,
 				DC56ED2F24C68A9C004613CE /* DividerView.swift in Sources */,
+				DC74D4D724C81A9B00E5D9A4 /* BusyPresenter.swift in Sources */,
 				DC56ED2E24C68A9C004613CE /* InstructionsView.swift in Sources */,
 				DC56ECFC24C68A03004613CE /* UndoRedoExample_Translator.swift in Sources */,
 				DC56ECF824C68A03004613CE /* TextFieldExample_Screen.swift in Sources */,
+				DC74D4DB24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */,
 				DC56ECF524C68A03004613CE /* RetailTranslator.swift in Sources */,
 				DC56ECF024C68A03004613CE /* UndoRedoExample_Screen.swift in Sources */,
 				DC56ED2724C68A9C004613CE /* DismissReceiver.swift in Sources */,
@@ -801,6 +849,7 @@
 				DC56ED3024C68A9C004613CE /* Fadeable.swift in Sources */,
 				DC56ED2D24C68A9C004613CE /* ObservingPageView.swift in Sources */,
 				DC56ED5024C68AEA004613CE /* OperatingSystem.swift in Sources */,
+				DC74D4D124C80B8D00E5D9A4 /* Login-Performer.swift in Sources */,
 				DC56ED3924C68ADE004613CE /* Presenter.swift in Sources */,
 				DC56ED5C24C68AEA004613CE /* TextValidation.swift in Sources */,
 				DC56ED2324C68A9C004613CE /* ObservingBottomButton.swift in Sources */,
@@ -810,6 +859,7 @@
 				DC56ECF624C68A03004613CE /* UndoRedoView.swift in Sources */,
 				DC56ED2C24C68A9C004613CE /* SpaceView.swift in Sources */,
 				DC56ED5E24C68AEA004613CE /* Publisher+Networking.swift in Sources */,
+				DC74D4CE24C80B8D00E5D9A4 /* Login-Translator.swift in Sources */,
 				DC56ED4C24C68AEA004613CE /* ImageExtensions.swift in Sources */,
 				DC56ECF224C68A03004613CE /* ObservingExample_ViewModel.swift in Sources */,
 				DC56ED5824C68AEA004613CE /* TextFile.swift in Sources */,
@@ -826,8 +876,10 @@
 				DC56ECBE24C6894A004613CE /* EvaluatorElement.swift in Sources */,
 				DC56ECEF24C68A03004613CE /* RetailScreen.swift in Sources */,
 				DC56ECBC24C6894A004613CE /* NamedAction.swift in Sources */,
+				DC74D4D024C80B8D00E5D9A4 /* Login-Evaluator.swift in Sources */,
 				DC56ED2224C68A9C004613CE /* DisplayableProductsView.swift in Sources */,
 				DC56ED2424C68A9C004613CE /* TitleView.swift in Sources */,
+				DC74D4CD24C80B8D00E5D9A4 /* Login-Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +888,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC56EC6824C688A7004613CE /* SwiftUI_KickoffTests.swift in Sources */,
+				DC74D4D324C813E500E5D9A4 /* Login-Tests.swift in Sources */,
+				DC74D4D424C814B600E5D9A4 /* Login-MockPerformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,9 +918,11 @@
 				DC56ECE824C68A02004613CE /* MenuScreen.swift in Sources */,
 				DC56ED5D24C68AEA004613CE /* TextValidation.swift in Sources */,
 				DC56ED1E24C68A9B004613CE /* ObservingPageView.swift in Sources */,
+				DC74D4CA24C80B8C00E5D9A4 /* Login-Evaluator.swift in Sources */,
 				DC56ED1724C68A9B004613CE /* KeyboardPadding.swift in Sources */,
 				DC56ECDC24C68A02004613CE /* UndoRedoExample_Evaluator.swift in Sources */,
 				DC56ED2024C68A9B004613CE /* DividerView.swift in Sources */,
+				DC74D4C824C80B8C00E5D9A4 /* Login-Translator.swift in Sources */,
 				DC56ED1C24C68A9B004613CE /* ProductView.swift in Sources */,
 				DC56ED1F24C68A9B004613CE /* InstructionsView.swift in Sources */,
 				DC56ECE624C68A02004613CE /* ObservingExample_Screen.swift in Sources */,
@@ -874,6 +930,7 @@
 				DC56ED1424C68A9B004613CE /* ObservingBottomButton.swift in Sources */,
 				DC56ECE324C68A02004613CE /* Retail-PageViewMaker.swift in Sources */,
 				DC56EC8924C688BA004613CE /* ContentView.swift in Sources */,
+				DC74D4DC24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */,
 				DC56ED1B24C68A9B004613CE /* OptionsView.swift in Sources */,
 				DC56ECE124C68A02004613CE /* ObservingExample_ViewModel.swift in Sources */,
 				DC56ED1324C68A9B004613CE /* DisplayableProductsView.swift in Sources */,
@@ -887,7 +944,9 @@
 				DC56ECDB24C68A02004613CE /* CircleButton.swift in Sources */,
 				DC56ECEB24C68A02004613CE /* UndoRedoExample_Translator.swift in Sources */,
 				DC56ECDE24C68A02004613CE /* RetailScreen.swift in Sources */,
+				DC74D4C724C80B8C00E5D9A4 /* Login-Screen.swift in Sources */,
 				DC56ED5724C68AEA004613CE /* ArrayExtensions.swift in Sources */,
+				DC74D4CB24C80B8C00E5D9A4 /* Login-Performer.swift in Sources */,
 				DC56ED6324C68AEA004613CE /* AfterWait.swift in Sources */,
 				DC56ECE024C68A02004613CE /* RetailEvaluator.swift in Sources */,
 				DC56ED4D24C68AEA004613CE /* ImageExtensions.swift in Sources */,
@@ -896,6 +955,7 @@
 				DC56ED5F24C68AEA004613CE /* Publisher+Networking.swift in Sources */,
 				DC56ECDD24C68A02004613CE /* TextFieldExample_ViewModel.swift in Sources */,
 				DC56ECE924C68A02004613CE /* EvaluatingTextField.swift in Sources */,
+				DC74D4D824C81AE500E5D9A4 /* BusyPresenter.swift in Sources */,
 				DC56ECE224C68A02004613CE /* PassablesExample_Screen.swift in Sources */,
 				DC56ED3A24C68ADE004613CE /* Presenter.swift in Sources */,
 				DC56ED1A24C68A9B004613CE /* FoundNotFoundButtonsView.swift in Sources */,

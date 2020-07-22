@@ -36,6 +36,7 @@ struct MenuScreen: View {
             TextFieldExample(),
             UndoRedoExample(),
             PassablesExample(),
+            LoginExample(),
             RetailExample()
         ]
         return screenItems.enumerated().map { (index, value) in

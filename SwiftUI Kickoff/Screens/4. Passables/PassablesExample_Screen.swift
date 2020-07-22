@@ -80,6 +80,7 @@ struct PillButtonStyle: ButtonStyle {
         case white
         case gray
         case black
+        case green
         
         func backgroundColor(isPressed: Bool) -> Color {
             switch self {
@@ -89,17 +90,21 @@ struct PillButtonStyle: ButtonStyle {
                 return Color.black.opacity(isPressed ? 0.08 : 0.05)
             case .black:
                 return Color.black.opacity(isPressed ? 0.35 : 1)
+            case .green:
+                return Color.green.opacity(isPressed ? 0.35 : 1)
             }
         }
         
         func foregroundColor(isPressed: Bool) -> Color {
             switch self {
             case .white:
-                return Color.black.opacity(isPressed ? 0.25 : 1)
+                return Color.black.opacity(isPressed ? 0.5 : 1)
             case .gray:
-                return Color.black.opacity(isPressed ? 0.25 : 1)
+                return Color.black.opacity(isPressed ? 0.7 : 1)
             case .black:
-                return Color.white.opacity(isPressed ? 0.25 : 1)
+                return Color.white.opacity(isPressed ? 0.7 : 1)
+            case .green:
+                return Color.white.opacity(isPressed ? 0.7 : 1)
             }
         }
     }

@@ -11,7 +11,7 @@ import Foundation
 struct TextValidation {
     var isValid = false
     var message: String = ""
-    var conditions: [Condition]
+    private var conditions: [Condition]
     
     init(_ conditions: [Condition]) {
         self.conditions = conditions
