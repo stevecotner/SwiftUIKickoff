@@ -155,7 +155,6 @@ struct WelcomeBox: View {
                 Group {
                     HStack(alignment: .top, spacing: 0) {
                         Text("This app contains examples of screens built using types and conventions found in the POET toolset.")
-                            .font(Font.subheadline)
                         Spacer(minLength: 0)
                     }
                     
@@ -164,7 +163,6 @@ struct WelcomeBox: View {
                     Group {
                         HStack(alignment: .top, spacing: 0) {
                             Text("POET is a pattern the Score team has been using since before SwiftUI, but it has been simplified with SwiftUI, Combine, and Swift 5.3.")
-                                .font(Font.subheadline)
                             Spacer(minLength: 0)
                         }
                         
@@ -172,7 +170,6 @@ struct WelcomeBox: View {
                         
                         HStack(alignment: .top, spacing: 0) {
                             Text("Programmers can use these tools to create a unidirectional flow in a Swifty style (it's more flexible and less syntactically noisy than, say, Redux). POET's goal is to properly decouple a screen's business state, display state, and view logic, to optimize for reuse within any given layer and for flexibility and clarity during debugging and refactoring.")
-                                .font(Font.subheadline)
                             Spacer(minLength: 0)
                         }
                         
@@ -180,7 +177,6 @@ struct WelcomeBox: View {
                         
                         HStack(alignment: .top, spacing: 0) {
                             Text("POET is named for some of its main features: Passables, Observables, Evaluators, and Translators. Some helpful patterns emerge from the use of these basic actors, and this project explores them.")
-                                .font(Font.subheadline)
                             Spacer(minLength: 0)
                         }
                         
@@ -189,6 +185,7 @@ struct WelcomeBox: View {
                     .opacity(isReadingMore ? 1 : 0)
                     .frame(height: isReadingMore ? nil : 0)
                 }
+                .font(Font.subheadline)
                 .opacity(0.65)
                 
                 Spacer().frame(height:4)

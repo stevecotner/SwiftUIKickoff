@@ -20,7 +20,6 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
     @Observed var validation: TextValidation
     
     // Internal state
-    @State private var validationSink: AnyCancellable?
     @State private var lastValidatedText: String = ""
     @State private var validationImageColor: Color = Color.clear
     @State private var shouldShowValidationMessage = false
@@ -128,24 +127,7 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
         }
         .padding(.bottom, 10)
         
-        .onReceive(text.objectWillChange) {
-            if text.wrappedValue == self.lastValidatedText { return }
-            self.lastValidatedText = self.text.wrappedValue
-            self.validationSink = makeValidationSink()
-        }
-        
-        .onReceive(self.$passableText.subject) { (string) in
-            if let string = string {
-                self.text.wrappedValue = string
-            }
-        }
-        .onAppear() {
-            self.validationSink = makeValidationSink()
-        }
-    }
-    
-    func makeValidationSink() -> AnyCancellable? {
-        self.$validation.observable.objectWillChange.debounce(for: 0.35, scheduler: DispatchQueue.main).sink { value in
+        .onReceive(text.objectDidChange.debounce(for: 0.4, scheduler: DispatchQueue.main)) {
             let isValid = validation.isValid
             if self.text.wrappedValue.isEmpty {
                 self.shouldShowValidationMessage = false
@@ -158,7 +140,12 @@ struct ValidatingTextField<E: Evaluating_TextField>: View {
             self.shouldShowValidationMessage = (isValid == false)
             self.shouldShowCheckmark = isValid
             self.shouldShowExclamationMark = (isValid == false)
-            self.validationSink?.cancel()
+        }
+        
+        .onReceive(self.$passableText.subject) { (string) in
+            if let string = string {
+                self.text.wrappedValue = string
+            }
         }
     }
 }

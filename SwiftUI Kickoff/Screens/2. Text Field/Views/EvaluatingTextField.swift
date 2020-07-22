@@ -47,7 +47,7 @@ struct EvaluatingTextField<E: Evaluating_TextField>: View {
                             evaluator.evaluate(.textFieldDidChange(text: text.wrappedValue, elementName: elementName))
                         }
 
-                    TextFieldClearButton(text: _text.wrappedValue, passableText: _passableText)
+                    TextFieldClearButton(text: _text.wrappedValue, passableText: $passableText)
                 }
                 .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 .background(
