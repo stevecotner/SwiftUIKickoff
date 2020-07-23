@@ -69,7 +69,7 @@ extension CardsExample.Translator {
         }
         
         withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0)) {
-            pickDeck = deck(title: "Read to Pick",
+            pickDeck = deck(title: "Ready to Pick",
                             cards: pickCards,
                             emptyMessage: "All caught up! No more orders to pick.",
                             instruction: "Tap an order to mark it as picked.",

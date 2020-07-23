@@ -153,9 +153,7 @@ extension CardsExample.Evaluator: Evaluating, Evaluating_ViewCycle, Evaluating_C
         state.spreadDeck = nil
         self.state = .listTasks(state)
         afterWait(200) {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0)) {
-                self.translator.focusedCard = self.firstCard(in: deckName)
-            }
+            self.translator.focusedCard = self.firstCard(in: deckName)
         }
     }
     
