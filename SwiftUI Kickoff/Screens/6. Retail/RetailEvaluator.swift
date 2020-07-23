@@ -282,7 +282,11 @@ extension RetailExample.Evaluator: Evaluating, Evaluating_ViewCycle, Evaluating_
             startTime: currentState.startTime,
             nextAction: nil)
         
-        self.state = .chooseDeliveryLocation(state)
+        self.translator.scrollToTop()
+            
+        afterWait(200) {
+            self.state = .chooseDeliveryLocation(state)
+        }
     }
     
     func advanceToCompleted() {
@@ -304,7 +308,11 @@ extension RetailExample.Evaluator: Evaluating, Evaluating_ViewCycle, Evaluating_
             doneAction: .done
             )
         
-        self.state = .completed(state)
+        self.translator.scrollToTop()
+        
+        afterWait(200) {
+            self.state = .completed(state)
+        }
     }
     
     func advanceToCanceled() {
@@ -322,7 +330,11 @@ extension RetailExample.Evaluator: Evaluating, Evaluating_ViewCycle, Evaluating_
             doneAction: .done
             )
         
-        self.state = .canceled(state)
+        self.translator.scrollToTop()
+        
+        afterWait(200) {
+            self.state = .canceled(state)
+        }
     }
     
     // MARK: Product Finding

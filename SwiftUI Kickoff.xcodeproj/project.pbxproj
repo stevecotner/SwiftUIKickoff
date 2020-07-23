@@ -137,6 +137,14 @@
 		DC74D4D824C81AE500E5D9A4 /* BusyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */; };
 		DC74D4DB24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */; };
 		DC74D4DC24C81B4100E5D9A4 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */; };
+		DC74D4DF24C8E5CB00E5D9A4 /* CardsExample_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DE24C8E5CB00E5D9A4 /* CardsExample_Screen.swift */; };
+		DC74D4E024C8E5CB00E5D9A4 /* CardsExample_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4DE24C8E5CB00E5D9A4 /* CardsExample_Screen.swift */; };
+		DC74D4E224C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E124C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift */; };
+		DC74D4E324C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E124C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift */; };
+		DC74D4E524C8E5E400E5D9A4 /* CardsExample_Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E424C8E5E400E5D9A4 /* CardsExample_Translator.swift */; };
+		DC74D4E624C8E5E400E5D9A4 /* CardsExample_Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E424C8E5E400E5D9A4 /* CardsExample_Translator.swift */; };
+		DC74D4E924C8EB4600E5D9A4 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E824C8EB4600E5D9A4 /* CardDeck.swift */; };
+		DC74D4EA24C8EB4600E5D9A4 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74D4E824C8EB4600E5D9A4 /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +262,10 @@
 		DC74D4C524C80B8300E5D9A4 /* Login-Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Translator.swift"; sourceTree = "<group>"; };
 		DC74D4D624C81A9B00E5D9A4 /* BusyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyPresenter.swift; sourceTree = "<group>"; };
 		DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingTextField.swift; sourceTree = "<group>"; };
+		DC74D4DE24C8E5CB00E5D9A4 /* CardsExample_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsExample_Screen.swift; sourceTree = "<group>"; };
+		DC74D4E124C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsExample_Evaluator.swift; sourceTree = "<group>"; };
+		DC74D4E424C8E5E400E5D9A4 /* CardsExample_Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsExample_Translator.swift; sourceTree = "<group>"; };
+		DC74D4E824C8EB4600E5D9A4 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +435,7 @@
 				DC56ED0124C68A66004613CE /* 4. Passables */,
 				DC74D4BF24C80B4E00E5D9A4 /* 5. Login */,
 				DC56ED0224C68A76004613CE /* 6. Retail */,
+				DC74D4DD24C8E4A400E5D9A4 /* 7. Cards */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -589,6 +602,25 @@
 			isa = PBXGroup;
 			children = (
 				DC74D4DA24C81B4100E5D9A4 /* ValidatingTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC74D4DD24C8E4A400E5D9A4 /* 7. Cards */ = {
+			isa = PBXGroup;
+			children = (
+				DC74D4DE24C8E5CB00E5D9A4 /* CardsExample_Screen.swift */,
+				DC74D4E124C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift */,
+				DC74D4E424C8E5E400E5D9A4 /* CardsExample_Translator.swift */,
+				DC74D4E724C8EB3500E5D9A4 /* Views */,
+			);
+			path = "7. Cards";
+			sourceTree = "<group>";
+		};
+		DC74D4E724C8EB3500E5D9A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC74D4E824C8EB4600E5D9A4 /* CardDeck.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -844,8 +876,10 @@
 				DC56ECF524C68A03004613CE /* RetailTranslator.swift in Sources */,
 				DC56ECF024C68A03004613CE /* UndoRedoExample_Screen.swift in Sources */,
 				DC56ED2724C68A9C004613CE /* DismissReceiver.swift in Sources */,
+				DC74D4E524C8E5E400E5D9A4 /* CardsExample_Translator.swift in Sources */,
 				DC56ED5224C68AEA004613CE /* Sink.swift in Sources */,
 				DC56ED2524C68A9C004613CE /* SelectableCapsuleButton.swift in Sources */,
+				DC74D4DF24C8E5CB00E5D9A4 /* CardsExample_Screen.swift in Sources */,
 				DC56ED3024C68A9C004613CE /* Fadeable.swift in Sources */,
 				DC56ED2D24C68A9C004613CE /* ObservingPageView.swift in Sources */,
 				DC56ED5024C68AEA004613CE /* OperatingSystem.swift in Sources */,
@@ -862,6 +896,7 @@
 				DC74D4CE24C80B8D00E5D9A4 /* Login-Translator.swift in Sources */,
 				DC56ED4C24C68AEA004613CE /* ImageExtensions.swift in Sources */,
 				DC56ECF224C68A03004613CE /* ObservingExample_ViewModel.swift in Sources */,
+				DC74D4E924C8EB4600E5D9A4 /* CardDeck.swift in Sources */,
 				DC56ED5824C68AEA004613CE /* TextFile.swift in Sources */,
 				DC56ED6224C68AEA004613CE /* AfterWait.swift in Sources */,
 				DC56ED5A24C68AEA004613CE /* NetworkingError.swift in Sources */,
@@ -875,6 +910,7 @@
 				DC56ECBA24C6894A004613CE /* ActionEvaluating+Breadcrumbing.swift in Sources */,
 				DC56ECBE24C6894A004613CE /* EvaluatorElement.swift in Sources */,
 				DC56ECEF24C68A03004613CE /* RetailScreen.swift in Sources */,
+				DC74D4E224C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift in Sources */,
 				DC56ECBC24C6894A004613CE /* NamedAction.swift in Sources */,
 				DC74D4D024C80B8D00E5D9A4 /* Login-Evaluator.swift in Sources */,
 				DC56ED2224C68A9C004613CE /* DisplayableProductsView.swift in Sources */,
@@ -938,9 +974,13 @@
 				DC56EC8724C688BA004613CE /* SwiftUI_Kickoff_MacApp.swift in Sources */,
 				DC56ECDF24C68A02004613CE /* UndoRedoExample_Screen.swift in Sources */,
 				DC56ED1524C68A9B004613CE /* TitleView.swift in Sources */,
+				DC74D4E324C8E5DA00E5D9A4 /* CardsExample_Evaluator.swift in Sources */,
+				DC74D4E624C8E5E400E5D9A4 /* CardsExample_Translator.swift in Sources */,
 				DC56ED1824C68A9B004613CE /* DismissReceiver.swift in Sources */,
 				DC56ED5924C68AEA004613CE /* TextFile.swift in Sources */,
 				DC56ECE524C68A02004613CE /* UndoRedoView.swift in Sources */,
+				DC74D4E024C8E5CB00E5D9A4 /* CardsExample_Screen.swift in Sources */,
+				DC74D4EA24C8EB4600E5D9A4 /* CardDeck.swift in Sources */,
 				DC56ECDB24C68A02004613CE /* CircleButton.swift in Sources */,
 				DC56ECEB24C68A02004613CE /* UndoRedoExample_Translator.swift in Sources */,
 				DC56ECDE24C68A02004613CE /* RetailScreen.swift in Sources */,

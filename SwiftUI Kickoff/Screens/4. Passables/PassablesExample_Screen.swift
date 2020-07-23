@@ -109,14 +109,20 @@ struct PillButtonStyle: ButtonStyle {
         }
     }
     
+    enum Size {
+        case small
+        case large
+    }
+    
     let background: BackgroundConfiguration
+    var size: Size = .large
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .foregroundColor(
                 background.foregroundColor(isPressed: configuration.isPressed)
         )
-        .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 18))
+        .padding(paddingForSize(size))
         .background(
             Capsule()
                 .fill(
@@ -124,5 +130,20 @@ struct PillButtonStyle: ButtonStyle {
             )
                 .opacity(1)
         )
+    }
+    
+    func paddingForSize(_ size: Size) -> EdgeInsets {
+        switch size {
+        case .small:
+            return EdgeInsets(top: 6,
+                       leading: 12,
+                       bottom: 6,
+                       trailing: 12)
+        case .large:
+            return EdgeInsets(top: 10,
+                       leading: 18,
+                       bottom: 10,
+                       trailing: 18)
+        }
     }
 }

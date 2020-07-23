@@ -36,6 +36,7 @@ extension RetailExample {
         
         // Passable
         @Passable var dismiss: Please?
+        @Passable var focusedViewID: String?
         
         // State Sink
         var stateSink: AnyCancellable?
@@ -344,6 +345,10 @@ extension RetailExample.Translator {
         // Bottom button
         
         bottomButtonAction = NamedDisableableAction(name: "Done", enabled: true, action: state.doneAction)
+    }
+    
+    func scrollToTop() {
+        focusedViewID = topSpace_.id
     }
 }
 

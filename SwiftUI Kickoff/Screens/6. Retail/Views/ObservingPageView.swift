@@ -20,6 +20,7 @@ protocol ObservingPageView_ViewMaker {
 
 struct ObservingPageView<V: ObservingPageView_ViewMaker> : View {
     @Observed var sections: [V.Section]
+    var focusedViewID: Passable<String>
     var viewMaker: V
     var margin: CGFloat = 0
     
@@ -29,22 +30,32 @@ struct ObservingPageView<V: ObservingPageView_ViewMaker> : View {
         } else {
             return AnyView(
                 VStack(spacing: 0) {
-                    ScrollView(showsIndicators: false) {
-                        ForEach(sections, id: \.id) { section in
-                            VStack(spacing: 0) {
-                                self.viewMaker.view(for: section)
-                                
-                                // Bottom Inset
-                                if (self.sections.firstIndex(where: {
-                                    $0.id == section.id
-                                })) == self.sections.count - 1 {
-                                    Spacer().frame(height:CGFloat(45))
+                    ScrollViewReader { scrollProxy in
+                        ScrollView(showsIndicators: false) {
+                            ForEach(sections, id: \.id) { section in
+                                VStack(spacing: 0) {
+                                    self.viewMaker.view(for: section)
+                                    
+                                    // Bottom Inset
+                                    if (self.sections.firstIndex(where: {
+                                        $0.id == section.id
+                                    })) == self.sections.count - 1 {
+                                        Spacer().frame(height:CGFloat(45))
+                                    }
+                                }
+                                .padding(EdgeInsets(top: 0, leading: self.margin, bottom: 0, trailing: self.margin))
+                            }
+                            .padding(.zero)
+                        }
+                        .padding(0)
+                        .onReceive(focusedViewID.subject) { value in
+                            if let value = value {
+                                withAnimation {
+                                    scrollProxy.scrollTo(value, anchor: .bottom)
                                 }
                             }
-                            .padding(EdgeInsets(top: 0, leading: self.margin, bottom: 0, trailing: self.margin))
                         }
-                        .padding(.zero)
-                    }.padding(0)
+                    }
                     Spacer()
                 }
             )

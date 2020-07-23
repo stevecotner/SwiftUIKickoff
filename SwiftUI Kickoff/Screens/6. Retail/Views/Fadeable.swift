@@ -9,10 +9,12 @@ import Foundation
 import SwiftUI
 
 struct Fadeable<Content>: View where Content : View {
-    @State var isShowing: Bool = false
     var content: () -> Content
+    var delay: Double
+    @State private var isShowing: Bool = false
     
-    init(@ViewBuilder content: @escaping () -> Content) {
+    init(delay: Double = 0.45, @ViewBuilder content: @escaping () -> Content) {
+        self.delay = delay
         self.content = content
     }
     
@@ -25,7 +27,7 @@ struct Fadeable<Content>: View where Content : View {
                 }
         }
             .onAppear() {
-                withAnimation(Animation.linear(duration: 0.3).delay(0.45)) {
+                withAnimation(Animation.linear(duration: 0.3).delay(delay)) {
                     self.isShowing = true
                 }
         }

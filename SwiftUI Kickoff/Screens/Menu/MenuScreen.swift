@@ -37,7 +37,8 @@ struct MenuScreen: View {
             UndoRedoExample(),
             PassablesExample(),
             LoginExample(),
-            RetailExample()
+            RetailExample(),
+            CardsExample()
         ]
         return screenItems.enumerated().map { (index, value) in
             return NumberedMenuScreenPresentable(number: index, menuScreenPresentable: value)

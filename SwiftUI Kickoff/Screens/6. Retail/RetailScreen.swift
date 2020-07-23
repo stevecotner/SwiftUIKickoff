@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RetailExample: MenuScreenPresentable {
     var title: String = "Retail Example"
-    var description: String = "Fully decoupling business state, display state, and view logic. Dynamically adding and removing sections on screen."
+    var description: String = "Fully decoupling business state, display state, and view logic. Dynamically adding and removing sections on screen. ObservingPageView and ViewMaker."
     var id: UUID = UUID()
     func screen() -> AnyView {
         return AnyView(Self.Screen())
@@ -35,6 +35,7 @@ extension RetailExample {
                 // MARK: Page View
                 ObservingPageView(
                     sections: self.translator.$sections,
+                    focusedViewID: self.translator.$focusedViewID,
                     viewMaker: RetailExample.ViewMaker(
                         evaluator: evaluator
                     )
